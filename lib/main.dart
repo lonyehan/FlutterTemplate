@@ -37,44 +37,11 @@ class App extends StatelessWidget {
   }
 }
 
-class HomePage extends StatefulWidget {
-  late Widget? widget;
-  HomePage({this.widget});
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("HomePage"),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            const UserAccountsDrawerHeader(
-              accountName: Text("Lonyehan"),
-              accountEmail: Text("lonyehan@gmail.com"),
-              currentAccountPicture: CircleAvatar(
-                child: Text("L"),
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: const Text(
-                "Home",
-                style: TextStyle(fontWeight: FontWeight.w600),
-              ),
-              onTap: () => {context.go('/')},
-            )
-          ],
-        ),
-      ),
-      body: widget.widget,
-    );
+    return Container();
   }
 }
